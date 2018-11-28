@@ -1,0 +1,34 @@
+PODS:
+  - News (0.1.0):
+    - R.swift
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+  - Settings (0.1.0):
+    - R.swift
+
+DEPENDENCIES:
+  - News (from `LocalPods/News`)
+  - R.swift (~> 4.0.0)
+  - Settings (from `LocalPods/Settings`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - R.swift
+    - R.swift.Library
+
+EXTERNAL SOURCES:
+  News:
+    :path: LocalPods/News
+  Settings:
+    :path: LocalPods/Settings
+
+SPEC CHECKSUMS:
+  News: de2f7f2bc88b21ec71d5efdc8a1c7e70e582d766
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  Settings: ce45e6b839bbe6ff4818c566074ef258ee423cc9
+
+PODFILE CHECKSUM: 5ff7808a98abf92a2f0cee02f16f072e48d88757
+
+COCOAPODS: 1.5.3

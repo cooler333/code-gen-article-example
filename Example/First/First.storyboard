@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First-->
+        <scene sceneID="uyP-dj-3ue">
+            <objects>
+                <viewController storyboardIdentifier="FirstVC" id="YUc-Cs-Dg2" customClass="FirstViewController" customModule="Example_debug" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rO4-7Z-yBM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="MBU-97-x3T">
+                                <rect key="frame" x="112.5" y="312" width="150.5" height="43"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hb-de-GTH">
+                                <rect key="frame" x="90.5" y="363" width="194.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="nvf-OQ-JXr">
+                                <rect key="frame" x="172.5" y="274" width="30" height="30"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MBU-97-x3T" firstAttribute="top" secondItem="nvf-OQ-JXr" secondAttribute="bottom" constant="8" id="4Kv-N5-Bzg"/>
+                            <constraint firstAttribute="centerX" secondItem="MBU-97-x3T" secondAttribute="centerX" id="JCs-6k-plD"/>
+                            <constraint firstAttribute="centerY" secondItem="MBU-97-x3T" secondAttribute="centerY" id="cD1-Iz-23A"/>
+                            <constraint firstItem="nvf-OQ-JXr" firstAttribute="centerX" secondItem="rO4-7Z-yBM" secondAttribute="centerX" id="eEf-0P-7DX"/>
+                            <constraint firstItem="3Hb-de-GTH" firstAttribute="top" secondItem="MBU-97-x3T" secondAttribute="bottom" constant="8" symbolic="YES" id="khn-kr-Djg"/>
+                            <constraint firstItem="3Hb-de-GTH" firstAttribute="centerX" secondItem="MBU-97-x3T" secondAttribute="centerX" id="rBQ-Rx-K9l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bjp-99-Y57"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="First" image="first" id="YVF-oS-H0Q"/>
+                    <connections>
+                        <outlet property="imageView" destination="nvf-OQ-JXr" id="8OV-0N-gtZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ncd-gF-8u1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
