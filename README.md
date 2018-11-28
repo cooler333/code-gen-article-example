@@ -1,7 +1,7 @@
 ## Что от вас требуется в этом примере?
 
 #### Подготовить окружение
-1. Установите [bundler](https://bundler.io/)
+1. Установите [bundler](https://bundler.io/) (опционально)
 1. запустите команду `bundle exec pod install` или `pod install` (если не ставили bundler)
 
 #### Оживить debug версию проекта 
