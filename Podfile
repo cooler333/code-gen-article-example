@@ -30,12 +30,17 @@ end
 pre_install do |installer|
     # map development pods
     installer.development_pod_targets.each do |target|
-        # map non test specs
-        target.non_test_specs.each do |spec|
-            # get full podspec file path
-            podspec_file_path = spec.defined_in_file
-            # get podspec dir path
-            pod_directory = podspec_file_path.parent
+        # get only main spec and exclude subspecs
+        spec = target.non_test_specs.first
+        # get full podspec file path
+        podspec_file_path = spec.defined_in_file
+        # get podspec dir path
+        pod_directory = podspec_file_path.parent
+
+        # check if path contains local pods directory
+        # exclude development but non local pods
+        local_pods_directory_name = "LocalPods"
+        if pod_directory.to_s.include? local_pods_directory_name
             # go to pod root directorty and run prepare command in sub-shell
             system("cd \"#{pod_directory}\"; #{spec.prepare_command}")
         end
