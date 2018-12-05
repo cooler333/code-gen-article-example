@@ -21,27 +21,25 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/cooler333/Settings'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'Local'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'cooler333' => 'utm4@mail.ru' }
-  s.source           = { :git => 'https://github.com/cooler333/Settings.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :path => '*' }
+  s.social_media_url = 'https://twitter.com/Cooler333'
 
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'Settings/Sources/**/*.swift'
   s.resources = 'Settings/Sources/**/*.{storyboard,xib,xcassets,strings}'
-  
-  s.dependency 'R.swift'
-
 
   # R.swift
+
+  s.dependency 'R.swift'
 
   generated_file_path = "Settings/Sources/R.generated.swift"
   s.prepare_command = 
   <<-CMD
-    touch #{generated_file_path}
+    touch "#{generated_file_path}"
   CMD
 
   r_swift_script = '"$PODS_ROOT/R.swift/rswift" generate "${PODS_TARGET_SRCROOT}/Settings/Sources" --accessLevel public'
