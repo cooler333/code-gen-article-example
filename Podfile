@@ -37,7 +37,7 @@ pre_install do |installer|
             # get podspec dir path
             pod_directory = podspec_file_path.parent
             # go to pod root directorty and run prepare command in sub-shell
-            system("cd #{pod_directory}; #{spec.prepare_command}")
+            system("cd \"#{pod_directory}\"; #{spec.prepare_command}")
         end
     end
 end
